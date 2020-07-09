@@ -1,0 +1,40 @@
+html {
+    font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
+    font-family: 'Poppins', sans-serif; /* this should be the rest of the output you got from Google fonts */
+    background-color: #E3D7C4;
+}  
+
+h1, h2, p, li {
+    color: black;
+}
+
+h1 {
+    font-size: 60px;
+    margin: 0;
+    line-height: 60px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0 0 10px 0;
+    font-weight: 400;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+body {
+    width: 500px;
+    margin: 0 auto; 
+    padding: 50px;
+}
+
+p, li {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
