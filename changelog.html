@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Changelog - Justin O'Donnell</title>
+        <meta name="description" content="A version history of all of the different changes and experiments made on this website over time.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.typekit.net/cvo2fkl.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Changelog</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Changelog</h1>
+            <div class="revision-entry">
+                <h3>Version 0.2.1</h3>
+                <p>September 3rd 2020</p>
+                <ul>
+                    <li>Added a disclaimer to the bottom of the contact form to let people know it won't actually do anything. Much like the rest of the site, it's just for show.</li>
+                    <li>Added a top bar navigation that appears at non-mobile viewport widths.</li>
+                    <li>This changelog was born! Took a little work to recall all of the changes made to the site before this existed.</li>
+                    <li>Created a 404 page! Just in case something messes up for users.</li>
+                    <li>Because multiple pages now exist, the internal stylesheet's been made external!
+                        <ul>
+                            <li>To make the site heavily responsive, a single-column layout was implemented via CSS grid. Really excited about this one tbh. The grid applies to the entire Main section of the site and utilizes named grid-lines, fractional margins, and a set of three center columns to place the content in.</li>
+                            <li>All emphermal unit values for font sizes on the site have been replaced with calc functions that take emphermal units and viewport widths into account. This enables all text on the site to very responsively scale in size with relation to the size of the device and the user's personal taste in magnifcation and font size.</li>
+                            <li>Implemented seperate 650px and 1024px breakpoints for tablet and desktop users, respectively.
+                                <ul>
+                                    <li>At 650px, the top navigation bar appears and the margins of the CSS grid become a min-max value based on the Ch unit, which is responsive for users with varying viewport magnifications.</li>
+                                    <li>When below 650px, site navigation can be accessed from an on-page link-list near the footer of the page. Maybe if we get more pages and I become a more experienced developer I'll develop a hamburger menu for mobile users.</li>
+                                    <li>At 1024px, our fun social media links make their return!</li>
+                                </ul>
+                            </li>
+                            <li>Pageload animation! Most of the site's content enters with simple half-second fade-in and slide when the page is loaded.</li>
+                            <li>The social media icons have their own seperate animations. A fun wipe and fade of the text-color and button background now occurs on and off of cursor hovers.</li>
+                            <li>The fixed top navigation that occurs at non-mobile viewport-widths has a gentle scale-up animation on and off of mouse hover. It's very playful.</li>
+                            <li>Wrote some specific CSS rules to help format this changelog page.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4>Known Issues</h4>
+                <ul>
+                    <li>The animation on the social media link buttons that's supposed to occur when the mouse hovers off of the button happens to occur on pageload. There doesn't appear to be a simple solution to this that doesn't use Javascript, and hiding it under a loading animation would just be silly.</li>
+                    <li>Gibson and Questa do not appear to load in on mobile devices. The site does not look good on Apple's default San Francisco family :/</li>
+                    <li>The email contact form still doesn't do anything, but users should at least know that now thanks to the disclaimer implemented in this version.</li>
+                </ul>
+            </div>
+            <div class="revision-entry">
+                <h3>Version 0.2.0.1</h3>
+                <p>August 10th 2020</p>
+                <ul>
+                    <li>Corrected spelling in some typos in comments within the CSS</li>
+                </ul>
+                <h4>Known Issues</h4>
+                <ul>
+                    <li>The wrapper behind the media links has a larger hover state than the link itself. This can cause users to see the white background but not the gradient text. It looks bad when this happens.</li>
+                    <li>Gibson and Questa do not appear to load in on mobile devices. The site does not look good on Apple's default San Francisco family :/</li>
+                    <li>The email contact form does not actually do anything. Users have no way of knowing this.</li>
+                </ul>
+            </div>
+            <div class="revision-entry">
+                <h3>Version 0.2</h3>
+                <p>August 10th 2020</p>
+                <ul>
+                    <li>A complete rewrite of the previous version. All copy and code replaced with brand new stuff.</li>
+                    <li>Rewrote metadata in the header to be more focused on myself.</li>
+                    <li>Implemented an internal stylesheet that gives a completely new look to the website.
+                        <ul>
+                            <li>Created a large header at the top of the page that utilized a CSS grid to lay introductory content out into a 2x2 grid with internal box lines between them. Because of CSS grid, it responsively scaled with browser viewports.</li>
+                            <li>Instead of the muted background color seen in 0.1, we've switched to a slightly Sprite-inspired color gradient that scales to the height and width of the viewport. With a fixed background attatchment, the body of the site appears to scroll over-top of this fixed background.</li>
+                            <li>Switched to Gibson and Questa as the page's fonts. The Gibson family is used for 99% of content, with Questa used as a subtitle at the top of the page.</li>
+                            <li>Switched to using emphermal units(em) as unit of measurement to determine the font sizes used on the site. In the previous version pixels(px) were used. Emphermal units are more appropriate as they provide better support for magnifcaiton of the viewport by users.</li>
+                            <li>Implemented an SVG 'read more' arrow after the introductory section of the page.</li>
+                            <li>Implemented a 650px breakpoint to make the site a bit more responsive in layout.</li>
+                            <li>While about the 650px breakpoint, fun little social media links appear after the introduction CSS grid. The slightly experimental background-clip decleration is used to make the text of the links a fun little gradient when hovered over.</li>
+                            <li>A stylized contact form was added near the bottom of the page! <em>Note: Does not actually do anything on the backend.</em></li>
+                            <li>Wrote a footer that begs people not to steal my identity or IP in any way. Be nice please.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4>Known Issues</h4>
+                <ul>
+                    <li>The wrapper behind the media links has a larger hover state than the link itself. This can cause users to see the white background but not the gradient text. It looks bad when this happens.</li>
+                    <li>Gibson and Questa do not appear to load in on mobile devices. The site does not look good on Apple's default San Francisco family :/</li>
+                    <li>The email contact form does not actually do anything. Users have no way of knowing this.</li>
+                </ul>
+            </div>
+            <div class="revision-entry">
+                <h3>Version 0.1</h3>
+                <p>July 9th 2020</p>
+                <ul>
+                    <li>The primordial soup of my web development career. Created using <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web">MDN's most entry-level tutorial.</a></li>
+                    <li>Implemented a simple image and an example paragraph in HTML.</li>
+                    <li>Implemented some basic CSS to create a background color, margins for the page, and some typography courtesy of Adobe Typekit.</li>
+                    <li>Implemented some basic Javascript to create a custom greeting.</li>
+                </ul>
+                <h4>Known Issues</h4>
+                <ul>
+                    <li>It's been a while and I can't remember to be quite honest ¯\_(ツ)_/¯</li>
+                </ul>
+            </div>
+            <div class="MobileOnly-Nav">
+                <hr>
+                <h2>What else is here?</h2>
+                <a href="#">Home</a><br>
+                <a href="changelog.html">Changelog</a>
+                <hr>
+            </div>
+            <h3>Social Media</h2>
+            <div id="sociallinks">
+                <div class="link-bg"><a href="https://www.instagram.com/justin.odonnell/">fairly defunct instagram</a></div>
+                <div class="link-bg"><a href="https://www.facebook.com/justin.odonnell.92">facebook, ew right?</a></div>
+                <div class="link-bg"><a href="https://twitter.com/one_floofy_boy">secret twitter UwU</a></div>
+            </div>
+        </main>
+        <footer>
+            <p>&#169; 2020 justin odonnell, please don't steal my stuff, i can't afford a lawyer but it <em>would</em> hurt my feelings :(</p>
+        </footer>
+    </body>
+</html>

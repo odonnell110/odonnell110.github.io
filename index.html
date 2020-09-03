@@ -4,240 +4,73 @@
         <meta charset="utf-8">
         <title>Justin ODonnell - Web Developer</title>
         <meta name="description" content="Justin O'Donnell is a practicing web designer with multi-disciplinary experience in visual arts and design.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://use.typekit.net/cvo2fkl.css">
-        <style>
-            html {
-                font-family: gibson, 'Segoe UI', sans-serif;
-                color: #F6FFFD;
-                background: linear-gradient(135deg, #DE9D35 0%, #46B99C 50%, #DE9D35 100%);
-                padding: 5em;
-            }
-            body {
-                font-size: 21px;
-            }
-            .namecard {
-                display: inline-block;
-                text-align: end;
-            }
-            h1 {
-                font-size: 3em;
-                font-weight: 600;
-                margin-block-start: .3em;
-                margin-block-end: 0em;
-            }
-            h1 + p {
-                font-family: questa, serif;
-                font-style: italic;
-                margin-block-start: -0.25em
-            }
-            h2 {
-                font-size: 3em;
-                font-weight: 600;
-                margin-block-start: .5em;
-                margin-block-end: 0.25em;
-            }
-            .welcome {
-                margin-inline-end: 1.5em;
-                font-size: 2em;
-            }
-            #whoa {
-                font-size: 1.25em;
-                font-weight: 700;
-            }
-            .welcome p {
-                margin-block-start: 0em;
-            }
-            .social-links {
-                display: none;             
-            }
-            #read-more-arrow {
-                font-size: 0.75em;
-                font-weight: 300;
-                text-align: center;
-            }
-            #read-more-arrow p {
-                margin-block-end: 0em;
-            }
-            #read-more-arrow svg {
-                width: 5vw;
-                height: 5vw;
-            }
-            main {
-                font-size: 1.25em;
-                margin-inline-end: 1.5em;
-            }
-            hr {
-                border-style: solid;
-                border-width: 1.5px;
-            }
-            button, input, select, textarea, label {
-                font-family: inherit;
-                font-size: 100%;
-            }
-            input, select, textarea {
-                width: 100%;
-                height: 2em;
-                margin-block-start: 0em;
-                margin-block-end: .75em;
-                text-indent: .5em;
-                font-weight: 300;
-                background-color: rgba(80, 80, 80, 40%);
-                color: #F6FFFD;
-                border: #46B99C solid 3px;
-                border-radius: 15px;
-            }
-            textarea {
-                height: 5em;
-            }
-            input[type="submit"] {
-                width: 15vw;
-            }
-            label {
-                font-size: 1.5em;
-            }
-            footer {
-                font-weight: 300;
-                font-size: .6em;
-                text-align: end;
-            }
-
-            @media (min-width: 750px) {
-                header {
-                    display: grid;
-                    grid-template-columns: 15fr .1fr 15fr;
-                    grid-template-rows: 15fr .1fr 15fr;
-                    grid-gap: .5em;
-                }
-                .namecard-wrapper {
-                    grid-column: 1;
-                    grid-row: 1;
-                    position: relative;
-                }
-                .namecard {
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                }
-                h1 + p {
-                    margin-block-end: 0;
-                }
-                .vertical-grid-line {
-                    background: #F6FFFD;
-                    width: .15em;
-                }
-                .welcome-wrapper {
-                    grid-column: 3;
-                    grid-row: 1 / 4;
-                    position: relative;
-                }
-                .welcome {
-                    margin-inline-end: initial;
-                    font-size: 2rem;
-                    /* The bottom three declarations work with the welcome-wrapper's relative positioning to place the text vertically in the center of it's column on the grid. */
-                    position: absolute;
-                    top: 50%;
-                    transform: translate(0, -50%);
-                }
-                .horizontal-grid-line {
-                    background: #F6FFFD;
-                    height: .15em;
-                }
-                .social-links {
-                    display: inherit;
-                    grid-column: 1;
-                    grid-row: 3 / 4;
-                }
-                li {
-                    list-style-type: none;
-                    list-style-position: inside;
-                    text-align: end;
-                    margin: 1em 0;
-                    font-weight: 400;
-                }
-                a {
-                    color: #F6FFFD;
-                    font-weight: 600;
-                }
-                a:hover, a:focus {
-                    border-bottom: #F6FFFD solid 6px;
-                    /* Below declaration is a fallback since the fun stuff uses experimental declarations. */
-                    background-color: #46B99C;
-                    /* And now the fun stuff. */
-                    background-image: linear-gradient(to right, #46B99C 0%, #DE9D35 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-                .link-bg:hover, .link-bg:focus {
-                    background-color: #F6FFFD;
-                    padding: .35em;
-                }
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <header>
-            <div class="namecard-wrapper">
-                <!--The above wrapper class was created to allow absolute positioning of the below namecard in the Header CSS Grid when over 700px wide.-->
-                <div class="namecard">
-                    <h1>Justin O'Donnell</h1>
-                    <p>web developer</p>
-                </div>
-            </div>
-            <div class="vertical-grid-line"></div>
-            <div class="welcome-wrapper">
-                <!--The above 'welcome wrapper' allows the below 'welcome' div to be translated vertically to the center of it's cells on the grid.-->
-                <div class="welcome">
-                    <span id="whoa">WHOA!</span>
-                    <p>You found my website!<br>
-                        …How did you do that? This web address's super hard to guess. So, you're either a robot here to send me spam mail, or you're seriously dedicated to my web development efforts. Either way, I'm flattered. Make yourself cozy.</p>
-                </div>
-            </div>
-            <div class="horizontal-grid-line"></div>
-            <div class="social-links">
-                <ul>
-                    <li>social media</li>
-                    <li><span class="link-bg"><a href="https://www.instagram.com/justin.odonnell/">fairly defunct instagram</a></span></li>
-                    <li><span class="link-bg"><a href="https://www.facebook.com/justin.odonnell.92">facebook, ew right?</a></span></li>
-                    <li><span class="link-bg"><a href="https://twitter.com/one_floofy_boy">secret furry twitter 0w0</a></span></li>
-                </ul>
-            </div>
-            <!--The below div is classless as it would fill the 'center' of the CSS grid. It would just look like a dot and be dumb.-->
-            <div></div>
-            <div class="vertical-grid-line"></div>
-        </header>
-        <div id="read-more-arrow">
-            <p>read the exciting backstory</p>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}.b{clip-path:url(#a);}.c{fill-rule:evenodd;opacity:0.54;}</style><clipPath id="a"><rect class="a" width="24" height="24"/></clipPath></defs><g class="b"><rect class="a" width="24" height="24"/><path class="c" d="M16.6,8.6,12,13.2,7.4,8.6,6,10l6,6,6-6Z"/></g></svg>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="changelog.html">Changelog</a></li>
+            </ul>
+        </nav>
         <main>
+            <div>
+                <h1>Justin O'Donnell</h1>
+                <p>web developer</p>
+            </div> 
+            <div>
+                <span id="whoa">WHOA!</span>
+                <p>You found my website!<br>
+                …How did you do that? This web address's super hard to guess. So, you're either a robot here to send me spam mail, or you're seriously dedicated to my web development efforts. Either way, I'm flattered. Make yourself cozy.</p>
+            </div>
+            <div id="sociallinks">
+                <div class="link-bg"><a href="https://www.instagram.com/justin.odonnell/">fairly defunct instagram</a></div>
+                <div class="link-bg"><a href="https://www.facebook.com/justin.odonnell.92">facebook, ew right?</a></div>
+                <div class="link-bg"><a href="https://twitter.com/one_floofy_boy">secret twitter UwU</a></div>
+            </div>
+            <div id="readmore">
+                <p>read the exciting backstory</p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}.b{clip-path:url(#a);}.c{fill-rule:evenodd;opacity:0.54;}</style><clipPath id="a"><rect class="a" width="24" height="24"/></clipPath></defs><g class="b"><rect class="a" width="24" height="24"/><path class="c" d="M16.6,8.6,12,13.2,7.4,8.6,6,10l6,6,6-6Z"/></g></svg>
+            </div>
             <p>Like most film school graduates, I left school disillusioned and drained of creativity; unsure of where to go and what to do next.</p>
             <p>Unlike most film school graduates, I'd been carrying several years of experience designing graphics, prints, and website mockups in varying capacities. I could do it all- except for the code. Until...</p>
             <p>Bam! A huge pandemic hit and I and many others had plenty of free time on their hands.</p>
             <p>I thought to myself: why not complete that missing link?</p>   
             <p>Now, I'm a practicing web developer with something to prove. I'd like to mash-up your ideas with my design experience to create a more beautiful, accessible, and equitable web.</p>
-            <hr>
-            <form method="POST" class="email-form">
+            <form method="POST">
                 <h2>let's chat</h2>
-                <div class="email-form">
+                <div>
                     <label for="name">name</label><br>
                     <input type="text" name="name" id="name" required>
                 </div>
-                <div class="email-form">
+                <div>
                     <label for="email">email</label><br>
                     <input type="email" name="email" id="email" required>
                 </div>
-                <div class="email-form">
+                <div>
                     <label for="tel">phone (optional)</label><br>
                     <input type="tel" name="tel" id="tel">
                 </div>
-                <div class="email-form form-message">
+                <div>
                     <label for="message">what's up?</label><br>
-                    <textarea type="text" name="message" id="message"></textarea>
+                    <textarea type="text" name="message" id="message" placeholder="Hey! I really like your website! :)"></textarea>
                 </div>
-                <div class="email-form">
+                <div>
                     <input type="submit" value="send">
                 </div>
+                <div>
+                    <p id="messagebox-disclaimer">Fun Fact: I don't know how to code the backend of an HTML form, so this message form doesn't actually work. ¯\_(ツ)_/¯</p>
+                </div>
             </form>
+            <div class="MobileOnly-Nav">
+                <hr>
+                <h2>What else is here?</h2>
+                <a href="#">Home</a><br>
+                <a href="changelog.html">Changelog</a>
+                <hr>
+            </div>
         </main>
         <footer>
             <p>&#169; 2020 justin odonnell, please don't steal my stuff, i can't afford a lawyer but it <em>would</em> hurt my feelings :(</p>
