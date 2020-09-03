@@ -1,0 +1,297 @@
+/* Important Stuff */
+html {
+    font-family: gibson, 'Segoe UI', sans-serif;
+    font-size: 10px;
+    color: #F6FFFD;
+    background: linear-gradient(135deg, #DE9D35 0%, #46B99C 50%, #DE9D35 100%);
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+}
+body {
+    margin: 0;
+}
+/* BREAKPOINT: Phone: 650px wide or less */
+nav {
+    display: none;
+}
+/* Grid-formatting for Main Content */
+main {
+    display: grid;
+    grid-template-columns: [viewport-start] 1fr [marginline] 1fr repeat(3, [content-inline-start] 25vw) [content-inline-end] 1fr [marginline] 1fr [viewport-end];
+}
+main > * {
+    grid-column: content-inline-start / content-inline-end;
+}
+/* Webpage Fade-in Animation */
+main, footer {
+    animation: fade-in .75s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out
+}
+    @keyframes fade-in {
+        from {
+            transform: translate(0, -3em);
+            opacity: 0%;
+        }
+        to {
+            transform: translate(0, 0);
+            opacity: 100%;
+        }
+    }
+/* Main Content */
+h1 {
+    font-size: calc(1.6em + 7.5vw);
+    font-weight: 600;
+    margin-block-start: .5em;
+    margin-block-end: 0;
+}
+h1 + p {
+    font-family: questa, sans-serif;
+    font-size: calc(1.6em + 3vw);
+    font-weight: 300;
+    font-style: italic;
+    margin-block-start: 0;
+}
+h2 {
+    font-size: calc(1.6em + 3vw);
+    font-weight: 600;
+    margin-block-start: 0;
+    margin-block-end: 0.25em;
+}
+h3 {
+    font-size: calc(1.6em + 4vw);
+    font-weight: 500;
+    margin-block-start: .5em;
+    margin-block-end: 0;
+}
+h4 {
+    font-size: calc(1.6em + 1.5vw);
+    font-weight: 500;
+    margin-block-start: .5em;
+    margin-block-end: 0;
+}
+a {
+    display: block;
+    color: #F6FFFD;
+    font-weight: 600;
+    text-decoration: wavy underline;
+}
+div.revision-entry > p {
+    font-family: questa, sans-serif;
+    font-size: calc(1.6em + .25vw);
+    font-weight: 300;
+    font-style: italic;
+    margin-block-start: 0;
+}
+div.revision-entry ul {
+    font-size: calc(16px + .5vw)
+}
+#whoa {
+    font-size: 4.2em;
+    font-weight: 700;
+}
+p {
+    font-size: 3em;
+    margin: .5em 0;
+}
+/* Social Media Links */
+#sociallinks {
+    display: none;
+}
+/* Read More Block */
+#readmore {
+    text-align: center;
+    font-size: .45em;
+    font-weight: 200;
+}
+#readmore p {
+    margin-block-end: 0;
+}
+#readmore svg {
+    height: 20ch;
+    width: 20ch;
+}
+/* Contact Form */
+form h2 {
+    margin-block-end: 0;
+}
+button, input, select, textarea, label {
+    font-family: inherit;
+    font-size: 100%;
+}
+input, select, textarea {
+    width: 100%;
+    height: 2em;
+    margin-block-start: 0em;
+    margin-block-end: .75em;
+    text-indent: .5em;
+    font-size: 3em;
+    font-weight: 300;
+    background-color: rgba(80, 80, 80, 40%);
+    color: #F6FFFD;
+    border: #46B99C solid 3px;
+    border-radius: 15px;
+}
+textarea {
+    height: 5em;
+    line-height: 1.25em;
+}
+textarea::placeholder {
+    color: #f6fffd73;
+}
+label {
+    font-size: 3em;
+}
+#messagebox-disclaimer {
+    font-size: 1.6em;
+    margin-block-start: 0;
+}
+/* Mobile-Only Nav Menu */
+hr {
+    border: #F6FFFD 2px solid;
+}
+div.MobileOnly-Nav a {
+    display: block;
+    color: #F6FFFD;
+    font-size: 2em;
+    font-weight: 500;
+    margin-block-end: 1em;
+}
+div.MobileOnly-Nav a[href="#"] {
+    display: none;
+}
+/* Footer */
+footer p {
+    font-size: 1.2em;
+    font-weight: 200;
+}
+
+/* BREAKPOINT: Tablet: 651px to 1023px wide */
+@media (min-width: 651px) {
+    main {
+        grid-template-columns: [viewport-start] 1fr [marginline] 1fr repeat(3, [content-inline-start] 27ch) [content-inline-end] 1fr [marginline] 1fr [viewport-end];
+    }
+    footer p {
+        font-size: 1.6em;
+    }
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    /* Top Nav Menu */
+    nav {
+        display: flow-root;
+        position: sticky;
+        top: 0;
+        background: #F6FFFD;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav a {
+        display: block;
+        color: #46B99C;
+        text-decoration: none;
+        font-size: 2em;
+        font-weight: 500;
+        margin: .75em 1.25em;
+        transition: transform .25s ease-out;
+    }
+    nav a[href="#"] {
+        display: flex;
+    }
+    nav a:hover, nav a:focus {
+        background: linear-gradient(135deg, #46B99C 25%, #DE9D35 50%, #46B99C 75%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transform: scale(1.15)
+    }
+    div.MobileOnly-Nav {
+        display: none;
+    }
+}
+/* BREAKPOINT: Computer: 1024px wide or more | No change to grid, only adds social media links and modifies font-size calcs */
+@media (min-width: 1024px) {
+    /* Heading Adjustments */
+    h1 {
+        font-size: calc(1.6em + 3.5vw);
+    }
+    h1 + p {
+        font-size: calc(1.6em + .75vw);;
+    }
+    h3 {
+        font-size: calc(1.6em + 1.75vw);
+    }
+    h4 {
+        font-size: calc(1.6em + 1vw);
+    }
+    #whoa {
+        font-size: calc(1.6em + 1.5vw);
+    }
+    span + p {
+        margin: .5em 0;
+    }
+    p {
+        font-size: calc(1.6em + 1.15vw);
+    }
+    /* Social Media Links */
+    #sociallinks {
+        display: flex;
+        justify-content: space-around;
+        margin: 1em 0;
+        font-weight: 600;
+    }
+    div.link-bg a {
+        display: block;
+        color: #F6FFFD;
+        margin: 0 .5em;
+        padding: .75em 2em;
+        font-size: 1.4em;
+        text-decoration: none;
+        text-align: center;
+        border-bottom: #F6FFFD solid .4em;
+        transition: color ease-out .5s;
+
+    }
+    div.link-bg a:link, div.link-bg a:visited {
+        color: #F6FFFD;
+    }
+    .link-bg {
+        background: linear-gradient(to top, #F6FFFD 50%,  rgba(0, 0, 0 , 0) 50%);
+        background-size: 100% 200%;
+        background-position: initial;
+        animation: bg-wipeup-reverse .5s ease-out;
+    }
+    @keyframes bg-wipeup-reverse {
+        from {
+            background-position: center bottom;
+        }
+        to {
+            background-position: initial;
+        }
+    }
+    .link-bg:hover, .link-bg:focus {
+        background: linear-gradient(to top, #F6FFFD 50%,  rgba(0, 0, 0 , 0) 50%);
+        background-size: 100% 200%;
+        background-position: center bottom;
+        animation: bg-wipeup .5s ease-out;
+    }
+    @keyframes bg-wipeup {
+        from {
+            background-position: initial;
+        }
+        to {
+            background-position: center bottom;
+        }
+    }
+    div.link-bg a:hover, div.link-bg a:focus {
+        background: linear-gradient(135deg, #46B99C 25%, #DE9D35 50%, #46B99C 75%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        }
+    }
