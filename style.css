@@ -1,6 +1,6 @@
 /* Important Stuff */
 html {
-    font-family: gibson, 'Segoe UI', sans-serif;
+    font-family: canada-type-gibson, 'Segoe UI', sans-serif;
     font-size: 10px;
     color: #F6FFFD;
     background: linear-gradient(135deg, #DE9D35 0%, #46B99C 50%, #DE9D35 100%);
@@ -96,7 +96,7 @@ p {
     margin: .5em 0;
 }
 /* Social Media Links */
-#sociallinks {
+.sociallinks {
     display: none;
 }
 /* Read More Block */
@@ -239,11 +239,15 @@ footer p {
         font-size: calc(1.6em + 1.15vw);
     }
     /* Social Media Links */
-    #sociallinks {
+    .sociallinks {
         display: flex;
         justify-content: space-around;
         margin: 1em 0;
         font-weight: 600;
+    }
+    h3.sociallinks {
+        display: block;
+        margin: 0;
     }
     div.link-bg a {
         display: block;

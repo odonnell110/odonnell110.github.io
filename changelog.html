@@ -18,6 +18,19 @@
         <main>
             <h1>Changelog</h1>
             <div class="revision-entry">
+                <h3>Version 0.2.1.2</h3>
+                <p>September 8th 2020</p>
+                <ul>
+                    <li>Stopped "Social Media" from showing up when it shouldn't at low viewport widths. Added it to the .sociallinks class and gave it it's own rules so that it can display in block, instead of flex like the rest of the Social Media div.</li>
+                    <li>(Hopefully) Fixed the Gibson font family not loading on many devices.</li>
+                </ul>
+                <h4>Known Issues</h4>
+                <ul>
+                    <li>The animation on the social media link buttons that's supposed to occur when the mouse hovers off of the button happens to occur on pageload. There doesn't appear to be a simple solution to this that doesn't use Javascript, and hiding it under a loading animation would just be silly.</li>
+                    <li>The email contact form still doesn't do anything.</li>
+                </ul>
+            </div>
+            <div class="revision-entry">
                 <h3>Version 0.2.1.1</h3>
                 <p>September 4th 2020</p>
                 <ul>
@@ -27,7 +40,7 @@
                 <ul>
                     <li>The animation on the social media link buttons that's supposed to occur when the mouse hovers off of the button happens to occur on pageload. There doesn't appear to be a simple solution to this that doesn't use Javascript, and hiding it under a loading animation would just be silly.</li>
                     <li>Gibson and Questa do not appear to load in on mobile devices. The site does not look good on Apple's default San Francisco family :/</li>
-                    <li>The email contact form still doesn't do anything, but users should at least know that now thanks to the disclaimer implemented in this version.</li>
+                    <li>The email contact form still doesn't do anything.</li>
                 </ul>
             </div>
             <div class="revision-entry">
@@ -123,8 +136,8 @@
                 <a href="index.html">Home</a><br>
                 <hr>
             </div>
-            <h3>Social Media</h3>
-            <div id="sociallinks">
+            <h3 class="sociallinks">Social Media</h3>
+            <div class="sociallinks">
                 <div class="link-bg"><a href="https://www.instagram.com/justin.odonnell/">fairly defunct instagram</a></div>
                 <div class="link-bg"><a href="https://www.facebook.com/justin.odonnell.92">facebook, ew right?</a></div>
                 <div class="link-bg"><a href="https://twitter.com/one_floofy_boy">secret twitter UwU</a></div>
