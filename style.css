@@ -150,13 +150,13 @@ label {
 /* Mobile-Only Nav Menu */
 hr {
     border: #F6FFFD 2px solid;
+    margin-block-start: 2em;
 }
 div.MobileOnly-Nav a {
     display: block;
     color: #F6FFFD;
     font-size: 2em;
     font-weight: 500;
-    margin-block-end: 1em;
 }
 div.MobileOnly-Nav a[href="#"] {
     display: none;
