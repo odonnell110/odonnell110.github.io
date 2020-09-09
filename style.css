@@ -278,7 +278,7 @@ footer p {
             background-position: initial;
         }
     }
-    .link-bg:hover, .link-bg:focus {
+    .link-bg:hover, .link-bg:focus-within {
         background: linear-gradient(to top, #F6FFFD 50%,  rgba(0, 0, 0 , 0) 50%);
         background-size: 100% 200%;
         background-position: center bottom;
